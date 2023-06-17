@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Weather App</title>
+  <link rel="icon" href="./weather.png" type="image/icon type">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./styles.css">
+  <script src="./main.js" defer></script>
+</head>
+<body>
+
+  <div class="weather-card">
+    <div class="search-container">
+      <input type="text" class="search-bar" placeholder="Search for cities">
+      <button>
+        <object type="image/svg+xml" data="search.svg">
+        </object>
+      </button>
+    </div>
+    <div class="weather loading">
+      <h2 class="city"></h2>
+      <h1 class="temperature">Temperature</h1>
+      <div class="flex">
+        <img src="./cloud.svg" alt="" class="icon" />
+        <div class="description">Weather</div>
+      </div>
+      <div class="humidity">Humidity: </div>
+      <div class="feels_like_temperature">Feels like: </div>
+      <div class="wind">Wind speed: </div>
+    </div>
+
+  </div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/vanilla-tilt/1.7.0/vanilla-tilt.min.js"></script>
+  <script>
+      VanillaTilt.init(document.querySelectorAll(".weather-card"), {
+		max: 4,
+		speed: 5000,
+    scale: 1.1,
+    glare: true,
+    "max-glare": 0.5,
+	});
+  </script>
+</body>
+</html>
